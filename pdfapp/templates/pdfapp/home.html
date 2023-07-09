@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Summarizer</title>
+</head>
+<body>
+    <h1>Welcome to PDF Summarizer</h1>
+    
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="pdf_file">
+        <br><br>
+        <input type="submit" value="Upload and Summarize">
+    </form>
+</body>
+</html>
